@@ -1,0 +1,59 @@
+body {
+    text-align: justify;
+    font-family: arial;
+    background-color: black;
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    perspective: 350px;
+    background-image: url("https://static1.squarespace.com/static/556e14aae4b0fb59709da098/55c0c580e4b01b70e621b88c/55c2127ee4b02907a9448631/1438782080430/PIA12066-1920x1200.jpg?format=2500w");
+    height: 150vh;
+    margin-top: 5em;
+}
+
+.crawl {
+    height: 100%;
+    margin: 0 2em;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(250px) rotateX(10deg);
+    top: 100%;
+    animation: crawlIntro 25s linear infinite;
+}
+
+
+.title {
+    text-align: center;
+}
+
+.blue {
+    color: blue;
+}
+
+.yellow, .yellow title {
+    color: #B5AF16;
+    font-size: 1.9em;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+    line-height: 1.9em;
+}
+
+@-moz-keyframes crawlIntro {
+    0% {
+        top: 80%;
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        top: -40%;
+        opacity: 0;
+    }
+}
